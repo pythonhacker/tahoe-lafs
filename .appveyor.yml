@@ -77,7 +77,7 @@ artifacts:
 on_failure:
   # Artifacts are not normally uploaded when the job fails.  To get the test
   # logs, we have to push them ourselves.
-  - ps: Push-AppveyorArtifact trial_test_log.txt -Filename trial.log
+  - ps: Push-AppveyorArtifact _trial_temp\test.log -Filename trial.log
   - ps: Push-AppveyorArtifact eliot.log -Filename eliot.log
 
 #on_success:
